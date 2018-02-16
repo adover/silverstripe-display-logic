@@ -15,9 +15,14 @@
     ],
     "require":
     {
-        "silverstripe/framework": "^4.0"
+        "silverstripe/framework": "^4.0",
+        "silverstripe/vendor-plugin": "^1.0"
     },
     "extra": {
+        "expose": [
+            "css",
+            "javascript"
+        ],
        "installer-name": "display_logic",
        "branch-alias": {
             "dev-master": "1.4.x-dev"
