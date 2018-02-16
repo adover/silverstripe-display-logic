@@ -105,7 +105,7 @@ class FormFieldExtension extends DataExtension {
 	 */
 	public function DisplayLogicMasters() {
 		if($this->displayLogicCriteria) {
-			return implode(",",array_unique($this->displayLogicCriteria->getMasterList()));			
+			return implode(",",array_unique($this->displayLogicCriteria->getMasterList()));
 		}
 	}
 
@@ -135,12 +135,12 @@ class FormFieldExtension extends DataExtension {
             }
 
             Requirements::javascript('silverstripe/admin: thirdparty/jquery-entwine/dist/jquery.entwine-dist.js');
-            Requirements::javascript(DISPLAY_LOGIC_DIR.'/javascript/display_logic.js');
-            Requirements::css(DISPLAY_LOGIC_DIR.'/css/display_logic.css');
+            Requirements::javascript('unclecheese/silverstripe-display-logic: /javascript/display_logic.js');
+            Requirements::css('unclecheese/silverstripe-display-logic: /css/display_logic.css');
 
 			return $this->displayLogicCriteria->toScript();
 		}
-		
+
 		return false;
 	}
 	public function onBeforeRender($field) {
